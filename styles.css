@@ -1,20 +1,219 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(90deg, #0066cc, #003366);
+  color: white;
+  text-align: center;
+}
 
+header .container {
+  position: absolute;
+    top: 7%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+header .container h1 {
+  font-size: 2.5rem;
+  margin-bottom: -0.5rem;
+}
+
+header .container p {
+  font-size: 1.2rem;
+}
+header img {
+  width: 100%;
+}
+nav {
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  text-align: center;
+}
+nav a {
+  color: #003366;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+  
+}
+nav a:hover {
+  color: #0066cc;
+}
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+.service {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.service img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.service h3 {
+  margin: 15px 0;
+  color: #003366;
+  font-size: 1.3rem;
+}
+.service p {
+  padding: 0 20px 20px;
+}
+.special-offers {
+  background-color: #e9f2ff;
+  padding: 40px;
+  margin: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.special-offers p {
+  font-size: 1.2rem;
+  color: #cc0000;
+  margin-bottom: 10px;
+}
+.special-offers p strong {
+  font-size: 1.5rem;
+}
+#contact {
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+}
+.contact-info a {
+  padding: 0vw 1vw;
+}
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact form input[type="submit"] {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#contact form input[type="submit"]:hover {
+  background-color: #003366;
+}
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+footer p {
+  margin: 0;
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+
+  header {
+    background: linear-gradient(90deg, #0066cc, #003366);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  header .container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  header .container h1 {
+    font-size: 1.2rem;
+  }
+
+  header .container p {
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-container {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .service h3 {
+    font-size: 1.1rem;
+  }
+
+  .special-offers p {
+    font-size: 1rem;
+  }
+
+  .special-offers p strong {
+    font-size: 1.3rem;
+  }
+
+  .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+  }
+  .contact-info a {
+    padding: 2vw 0vw;
   }
 
-img.banner {
-    width: 100%;
-    height: auto;
+  footer p {
+    font-size: 0.9rem;
+  }
 }
