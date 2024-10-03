@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Banner Image and Header Styling */
+header {
+    position: relative;
+    /* overflow: hidden; */
+    height: 450px; /* Fixed height for the header section */
+}
+
+
+
+.banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    left: 0; /* Align to the left edge of the screen */
+    top: -100vh; /* Start completely off-screen */
+    animation: slideDown 2s ease forwards;
+}
+
+.header-text {
+    position: relative;
+    top: 30px; /* Closer to the top of the page */
+    color: white;
+    text-align: justify;
+    width: 50vw;
+    animation: fadeIn 1.5s ease 0.0s forwards; /* Fade in after the banner */
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+/* Overlayed Divs */
+.overlay {
+    position: absolute;
+    top: 20vw; /* Adjust as necessary */
+    font-size: 1.5rem;
+    background-color: #eeff00;
+    border-radius: 50px;
+    color: black;
+    text-align: center;
+    padding: 1vw 1.5vw;
+    opacity: 0;
+}
+
+.overlay-left {
+    left: -50%; /* Offscreen initially */
+    animation: slideInLeft 2.5s ease 1s forwards; /* Delay for header to finish */
+}
+
+.overlay-right {
+    right: -50%; /* Offscreen initially */
+    animation: slideInRight 2.5s ease 1s forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes slideDown {
+    0% {
+        top: -100vh; /* Start off-screen */
+    }
+    100% {
+        top: 0; /* End at top of the page */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -50%;
+        opacity: 0;
+    }
+    100% {
+        left: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -50%;
+        opacity: 0;
+    }
+    100% {
+        right: 20%;
+        opacity: 1;
+    }
+}
