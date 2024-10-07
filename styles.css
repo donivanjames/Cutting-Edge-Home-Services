@@ -281,7 +281,7 @@ footer p {
 
   .makeover {
     grid-template-columns: 1fr;
-    
+    width: 100%;
   }
 
   .makeover .card {
